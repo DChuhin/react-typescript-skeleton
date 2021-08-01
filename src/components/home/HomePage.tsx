@@ -3,10 +3,10 @@ import React from 'react';
 interface HomePageProps {
 }
 
-const Device = ({}: HomePageProps) => (
+const HomePage = ({}: HomePageProps) => (
     <div>
         <span>This is home page</span>
     </div>
 );
 
-export default Device;
+export default HomePage;

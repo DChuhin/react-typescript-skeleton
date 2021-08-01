@@ -1,8 +1,8 @@
 import React from 'react';
 import HomePage from 'components/home/HomePage';
+import EventsPage from 'components/events/EventsPage';
 import DevicesPage from 'components/device/DevicesPage';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import EventsPage from '../events/EventsPage';
 
 const Router = () => (
     <BrowserRouter>

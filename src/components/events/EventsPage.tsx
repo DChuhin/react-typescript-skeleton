@@ -3,10 +3,10 @@ import React from 'react';
 interface EventsPageProps {
 }
 
-const Device = ({}: EventsPageProps) => (
+const EventsPage = ({}: EventsPageProps) => (
     <div>
         <span>This is home page</span>
     </div>
 );
 
-export default Device;
+export default EventsPage;
