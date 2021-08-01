@@ -2,6 +2,8 @@ import { HttpMethod, HttpRequest } from 'api/http/httpInterfaces';
 import urlAssembler from 'url-assembler';
 import Cookies from 'universal-cookie';
 
+const API_PREFIX = '/api';
+
 const cookies = new Cookies();
 const csrfProtectedMethods = [HttpMethod.POST, HttpMethod.PUT, HttpMethod.DELETE, HttpMethod.PATCH];
 const getDefaultHeaders = (method: HttpMethod) => {
@@ -16,7 +18,7 @@ const getDefaultHeaders = (method: HttpMethod) => {
 
 export const doRequest = ({ url, urlParams, queryParams, body, method, headers }: HttpRequest) => {
   const resultUrl = urlAssembler()
-    .template(url)
+    .template(`${API_PREFIX}${url}`)
     .param(urlParams || {})
     .query(queryParams || {})
     .toString();

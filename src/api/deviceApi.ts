@@ -1,13 +1,13 @@
 import { ApiEndpoint, HttpMethod } from 'api/http/httpInterfaces';
 
 export interface ListDevicesParams {
-  offset: number,
-  limit: number,
+  offset: number;
+  limit: number;
 }
 
 export interface DeviceDto {
-  id: number,
-  name: String,
+  id: number;
+  name: String;
 }
 
 const listDevices: ApiEndpoint<ListDevicesParams, DeviceDto[]> = {

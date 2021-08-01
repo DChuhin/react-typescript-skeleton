@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Device from 'components/device/Device';
+import Device from './Device';
 import { connect } from 'react-redux';
 import { RootState } from 'redux/store';
 import { DeviceDto } from 'api/deviceApi';
@@ -26,6 +26,8 @@ const DevicesPage = ({ devices, fetchDevicesList }: DevicesPageProps) => {
 }
 
 export default connect(
-  (store: RootState) => store.devices.devices,
+  (store: RootState) => ({
+    devices: store.devices.devices
+  }),
   { fetchDevicesList }
 )(DevicesPage);

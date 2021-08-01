@@ -1,13 +1,13 @@
 import { ApiEndpoint, HttpMethod } from 'api/http/httpInterfaces';
 
 interface ListDeviceEventsRequest {
-  deviceId?: number,
+  deviceId?: number;
 }
 
 interface EventDto {
-  id: number,
-  deviceId: number,
-  message: string,
+  id: number;
+  deviceId: number;
+  message: string;
 }
 
 const listDeviceEvents: ApiEndpoint<ListDeviceEventsRequest, EventDto[]> = {
